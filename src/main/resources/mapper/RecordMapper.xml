@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper  namespace="com.baizhi.auction.dao.RecordDao">
+
+
+    <resultMap type="Record" id="map">
+        <result column="auction_time" property="auction_time"/>
+        <result column="auction_price" property="auction_price"/>
+        <collection property="userList" ofType="User">
+            <result column="user_name" property="user_name"/>
+        </collection>
+    </resultMap>
+
+    <!-- 查询 -->
+    <select id="select" resultMap="map">
+		     select distinct a.*,c.user_name from
+			 auction_record a
+			 left join auction_user c
+			 on a.user_id =c.user_id
+			 where a.auction_id =#{auction_id}
+			 order by AUCTION_PRICE desc
+		</select>
+
+    <!-- 添加 -->
+    <insert id="insert">
+		  insert into auction_record values(0,#{user_id},#{auction_id},#{auction_time},#{auction_price})
+		</insert>
+
+    <!-- 删除 -->
+    <delete id="deleteRec">
+		delete from auction_record  where auction_id=#{id}
+		</delete>
+
+
+
+</mapper>
