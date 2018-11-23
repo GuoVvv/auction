@@ -76,26 +76,38 @@
         <!-- 自己手动导进maven本地仓库的谷歌验证码jar包 -->
 
 
-        <!--        <dependency>
-                    <groupId>kapt</groupId>
-                    <artifactId>auct</artifactId>
-                    <version>1.1.0</version>
-                </dependency>
+        <!--<dependency>
+            <groupId>com.baizhi.ojdbc</groupId>
+            <artifactId>auction</artifactId>
+            <version>1.1.0</version>
+        </dependency>
 
-                <dependency>
-                    <groupId>kap</groupId>
-                    <artifactId>auc</artifactId>
-                    <version>1.1.0</version>
-                </dependency>-->
+        <dependency>
+            <groupId>com.baizhi.kaptcha</groupId>
+            <artifactId>kap</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baizhi.kaptcha-jdk</groupId>
+            <artifactId>kap-jdk</artifactId>
+            <version>1.1.0</version>
+        </dependency>-->
 
 
 
         <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
-        <dependency>
+       <!-- <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
             <version>5.0.0</version>
+        </dependency>-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.2</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.github.axet</groupId>
